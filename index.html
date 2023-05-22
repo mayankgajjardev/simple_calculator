@@ -47,13 +47,8 @@
             var p = document.getElementById("res").value;  
            
             if(p != ""){
-                var q = eval(p); 
-                if(isNaN(p) || isFinite(p)){
-                    document.getElementById("res").value = "";
-                }else{
-                    document.getElementById("res").value = q; 
-                }
-                
+                var q = eval(p);  
+                document.getElementById("res").value = q;  
             }else{
                 alert("Please Click any button.");
             }
