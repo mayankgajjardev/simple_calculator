@@ -14,7 +14,7 @@
             <td><button onclick="display('-')">-</button></td>
             <td><button onclick="display('*')">*</button></td>
             <td><button onclick="display('/')">/</button></td>
-            <td><button onclick="clear()">C</button></td>
+            <td><button onclick="clearRes()">C</button></td>
         </tr>
        
         <tr>
@@ -35,7 +35,7 @@
     <button onclick="cal()">Calculate</button>
 
     <script type="text/javascript"> 
-        function clear() {
+        function clearRes() {
             document.getElementById("res").value = "";
         }
         
@@ -43,10 +43,14 @@
             document.getElementById("res").value += value;
         }
          
-        function cal(action) {
+        function cal() {
             var p = document.getElementById("res").value;  
-            var q = eval(p); 
-            document.getElementById("res").value = q;
+            if(p != ""){
+                var q = eval(p); 
+                document.getElementById("res").value = q;
+            }
+            
+            
         }
     </script>
 
