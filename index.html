@@ -45,10 +45,16 @@
          
         function cal() {
             var p = document.getElementById("res").value;  
+           
             if(p != ""){
                 var q = eval(p); 
-                document.getElementById("res").value = q;
-            }
+                if(isNaN(p) || isFinite(p)){
+                    document.getElementById("res").value = "";
+                }else{
+                    document.getElementById("res").value = q; 
+                }
+                
+            } 
             
             
         }
